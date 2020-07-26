@@ -152,22 +152,3 @@ jobs:
         curl -fsSL git.io/file-transfer | sh
         ./transfer wet -s -p 16 --no-progress ${FIRMWARE} 2>&1 | tee wetransfer.log
         echo "::warning file=wetransfer.com::$(cat wetransfer.log | grep https)"
-
-    - name: Generate tag
-      id: tag
-      if: env.UPLOAD_RELEASE == 'true' && !cancelled()
-      run: |
-        echo "::set-env name=RELEASE_TAG::$(date +"%Y.%m.%d-%H")"
-        echo "🚀 Auto build" >> release.txt
-        echo "🔗 [Cowtransfer](${{ env.COWTRANSFER_URL }})" >> release.txt
-        echo "🔗 [WeTransfer](${{ env.WETRANSFER_URL }})" >> release.txt
-        echo "::set-output name=status::success"
-    - name: Upload firmware to release
-      uses: softprops/action-gh-release@v1
-      if: steps.tag.outputs.status == 'success' && !cancelled()
-      env:
-        GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
-      with:
-        tag_name: ${{ env.RELEASE_TAG }}
-        body_path: release.txt
-        files: ${{ env.FIRMWARE }}/*
