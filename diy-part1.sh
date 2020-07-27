@@ -13,7 +13,7 @@ sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # Add a feed source
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
-git clone https://github.com/Lienol/openwrt-package.git package/luci-app-Lienol
+#git clone https://github.com/Lienol/openwrt-package.git package/luci-app-Lienol
 
 
 # kenzok8软件包
@@ -34,12 +34,12 @@ git clone https://github.com/Lienol/openwrt-package.git package/luci-app-Lienol
 git clone -b master https://github.com/vernesong/OpenClash.git package/luci-app-openclash
 git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
 
-git clone https://github.com/Mrbai98/luci-theme-atmaterial.git package/luci-theme-atmaterial
+#git clone https://github.com/Mrbai98/luci-theme-atmaterial.git package/luci-theme-atmaterial
 git clone https://github.com/Leo-Jo-My/luci-theme-opentomcat.git package/luci-theme-opentomcat
 
 #dockerman
-git clone https://github.com/lisaac/luci-app-dockerman.git package/luci-app-dockerman
-git clone https://github.com/lisaac/luci-lib-docker.git package/luci-lib-docker
+#git clone https://github.com/lisaac/luci-app-dockerman.git package/luci-app-dockerman
+#git clone https://github.com/lisaac/luci-lib-docker.git package/luci-lib-docker
 
 #smartdns
 git clone https://github.com/pymumu/openwrt-smartdns package/smartdns
