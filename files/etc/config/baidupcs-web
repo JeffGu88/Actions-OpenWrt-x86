@@ -1,6 +1,0 @@
-
-config baidupcs-web 'config'
-	option enabled '0'
-	option port '5299'
-	option download_dir '/mnt/sdb2/baidudownloads'
-
