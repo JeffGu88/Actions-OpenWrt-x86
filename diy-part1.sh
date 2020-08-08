@@ -16,20 +16,14 @@ sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 #git clone https://github.com/Lienol/openwrt-package.git package/luci-app-Lienol
 
 
-# kenzok8软件包
-#git clone https://github.com/kenzok8/openwrt-packages.git package/kenzok8
-#cd package/kenzok8
-#rm -rf luci-app-openclash
-#rm -rf luci-app-passwall
-#rm -rf luci-app-ssr-plus
-#rm -rf luci-app-smartdns
-#rm -rf luci-theme-opentomato
-#rm -rf luci-theme-opentomcat
-#rm -rf smartdns
-#cd ../..
-
-# passwall依赖
-#git clone https://github.com/kenzok8/small.git package/small
+#passwall出国软件
+svn co https://github.com/Lienol/openwrt-package/trunk/lienol/luci-app-passwall package/luci-app-passwall
+svn co https://github.com/Lienol/openwrt-package/trunk/package/brook package/brook
+svn co https://github.com/Lienol/openwrt-package/trunk/package/chinadns-ng package/chinadns-ng
+svn co https://github.com/Lienol/openwrt-package/trunk/package/tcping package/tcping
+svn co https://github.com/Lienol/openwrt-package/trunk/package/trojan-go package/trojan-go
+svn co https://github.com/Lienol/openwrt-package/trunk/package/trojan-plus package/trojan-plus
+svn co https://github.com/Lienol/openwrt-package/trunk/package/syncthing package/syncthing
 
 git clone -b master https://github.com/vernesong/OpenClash.git package/luci-app-openclash
 git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
