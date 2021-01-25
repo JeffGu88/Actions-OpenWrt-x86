@@ -23,8 +23,8 @@ git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-ser
 git clone https://github.com/Leo-Jo-My/luci-theme-opentomcat.git package/luci-theme-opentomcat
 
 #dockerman
-#git clone https://github.com/lisaac/luci-app-dockerman.git package/luci-app-dockerman
-#git clone https://github.com/lisaac/luci-lib-docker.git package/luci-lib-docker
+git clone https://github.com/lisaac/luci-app-dockerman.git package/luci-app-dockerman
+git clone https://github.com/lisaac/luci-lib-docker.git package/luci-lib-docker
 
 #smartdns
 git clone https://github.com/pymumu/openwrt-smartdns package/smartdns
