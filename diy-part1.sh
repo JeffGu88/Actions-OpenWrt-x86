@@ -15,7 +15,8 @@ sed -i '$a src-git passwall https://github.com/xiaorouji/openwrt-passwall' feeds
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 #git clone https://github.com/Lienol/openwrt-package.git package/luci-app-Lienol
 #git clone https://github.com/xiaorouji/openwrt-passwall.git package/openwrt-passwall
-git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
+rm -rf /lede/package/lean/luci-theme-argon
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
 git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
 git clone -b master https://github.com/vernesong/OpenClash.git package/luci-app-openclash
 git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
