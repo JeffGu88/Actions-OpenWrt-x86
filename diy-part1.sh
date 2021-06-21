@@ -9,7 +9,7 @@
 #=============================================================
 
 # Uncomment a feed source
-sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
+#sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 sed -i '$a src-git passwall https://github.com/xiaorouji/openwrt-passwall' feeds.conf.default
 # Add a feed source
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
@@ -20,6 +20,7 @@ git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lea
 #git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
 git clone -b master https://github.com/vernesong/OpenClash.git package/luci-app-openclash
 git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
+git clone https://github.com/fw876/helloworld.git package/helloworld
 
 #git clone https://github.com/Mrbai98/luci-theme-atmaterial.git package/luci-theme-atmaterial
 git clone https://github.com/Leo-Jo-My/luci-theme-opentomcat.git package/luci-theme-opentomcat
